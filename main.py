@@ -24,7 +24,7 @@ def oncl():
     for i in range(len(term)):
         if answer[i]==term[i]:strike+=1
         elif term[i] in answer:ball+=1
-    newone=tk.Label(window,text=f'{entry.get()} {strike}s{ball}b')
+    newone=tk.Label(window,text=f'{entry.get()} {strike}S{ball}B',font=('arial',20))
     newone.pack()
     if strike==3:
         winn=tk.Label(window,text='you win',font=('arial',30,'bold'),fg='red')
