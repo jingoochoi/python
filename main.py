@@ -1,7 +1,16 @@
 import tkinter as tk
+from PIL import Image,ImageTk
 import random
+import sys
+import os
 window=tk.Tk()
 window.title('the numbers baseball')
+if getattr(sys,'frozen',False):base_path=sys._MEIPASS
+else:base_path=os.path.abspath('.')
+image_path=os.path.join(base_path,'baseball.png')
+image=Image.open(image_path)
+photo=ImageTk.PhotoImage(image)
+window.iconphoto(True,photo)
 window.geometry('500x500')
 window.update_idletasks()
 window_width = window.winfo_width()
